@@ -63,8 +63,14 @@ const post = {
   ],
 };
 
-console.log(JSON.stringify(post, 2));
+let result =[];
 
+result.push(post.author)
+result.push(post.comments[0].rating.dislikes)
+result.push(post.comments[1].userId)
+result.push(post.comments[1].text)
+
+console.log(result);
 // Задание 3
 // Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
 
