@@ -63,14 +63,15 @@ const post = {
   ],
 };
 
-let result =[];
+let result = [];
 
-result.push(post.author)
-result.push(post.comments[0].rating.dislikes)
-result.push(post.comments[1].userId)
-result.push(post.comments[1].text)
+result.push(post.author);
+result.push(post.comments[0].rating.dislikes);
+result.push(post.comments[1].userId);
+result.push(post.comments[1].text);
 
 console.log(result);
+
 // Задание 3
 // Дан массив products, необходимо цену каждого продукта уменьшить на 15% используя метод forEach.
 
@@ -89,14 +90,30 @@ const products = [
   },
 ];
 
+products.forEach((element) => {
+  for (const key in element) {
+    if (key == "price") {
+      element[key] = element[key] - element[key] * 0.15;
+      }
+  }
+  console.log(element);
+});
+
 // **Задание 5**
-// Дано 2 массива 
+// Дано 2 массива
 const en = ["mon", "tue", "wed", "thu", "fri", "sat", "sun"];
-const ru = ["понедельник", "вторник", "среда", "четверг", "пятница", "суббота", "воскресенье"]
+const ru = [
+  "понедельник",
+  "вторник",
+  "среда",
+  "четверг",
+  "пятница",
+  "суббота",
+  "воскресенье",
+];
 
 const dayTranslation = {};
 for (let i = 0; i < en.length; i++) {
-    dayTranslation[en[i]]=ru[i]
-    
+  dayTranslation[en[i]] = ru[i];
 }
 console.log(dayTranslation);
